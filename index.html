@@ -27,19 +27,37 @@
   <header class="navbar">
    
     <div class="container">
-      <h1 class="logo">school</h1>
+      <div class="logo">
+        <img src="photo/" alt="شعار المدرسة" class="img-fluid">
+        <span class="logo-text">مدرسة  الخاصة</span>
+      </div>
       <nav class="nav">
-        <a href="#about">عن المدرسة</a>
-        <a href="#director">رسالة المدير</a>
-        <a href="#programs">الأقسام</a>
-        <a href="#activities">الأنشطة</a>
-        <a href="#contact">تواصل معنا</a>
+        <div class="dropdown">
+          <button class="btn btn-success dropdown-toggle" type="button" id="navbarDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 25px;">
+            القائمة الرئيسية
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
+        <li><a class="dropdown-item" href="#about">عن المدرسة</a></li>
+        <li><a class="dropdown-item" href="#director">رسالة المدير</a></li>
+        <li><a class="dropdown-item" href="#programs">الأقسام</a></li>
+        <li><a class="dropdown-item" href="#activities">الأنشطة</a></li>
+        <li><a class="dropdown-item" href="#gallery">معرض الصور</a></li>
+        <li><a class="dropdown-item" href="#news">الأخبار</a></li>
+        <li><a class="dropdown-item" href="#faq">الأسئلة الشائعة</a></li>
+        <li><a class="dropdown-item" href="#testimonials">آراء أولياء الأمور</a></li>
+        <li><a class="dropdown-item" href="#team">فريق العمل</a></li>
+        <li><a class="dropdown-item" href="#partners">الشركاء</a></li>
+        <li><a class="dropdown-item" href="#contact">تواصل معنا</a></li>
+            <li><a class="dropdown-item" href="testing.html">1 </a></li>
+          </ul>
+        </div>
+        
       </nav>
     </div>
   </header>
 
   <!--  شريط عرض سريع   -->
-  <section class="hero">
+  <section class="hero" style="background-image: url('photo/Staples_High_School,_Westport,_CT.jpg');">
     <div class="container text-center py-5">
       <h2 class="mb-3">مرحباً بكم في مدرسة  الخاصة</h2>
       <p class="lead mb-4">نحن نؤمن بأن التعليم هو أساس بناء المستقبل، ونلتزم بتقديم بيئة تعليمية محفزة وآمنة لجميع الطلاب.</p>
@@ -94,7 +112,6 @@
            <h2>رسالة المدير
             <br>
             <span class="holo-text">أ. أحمد محمد</span>
-
            </h2>
 
              <p>
@@ -112,29 +129,36 @@
   </section>
 
   <!-- ====== الأقسام ====== -->
-  <section id="programs" class="programs">
+  <section id="programs" class="programs-section py-5">
     <div class="container">
-      <h2>الأقسام </h2>
-      <div class="cards">
-        <div class="card">
-          <img src="photo/66e9a4d007bc4867cb9a8ea3_pexels-alexander-mass-748453803-27872051.webp" alt=" ">
-          <h3>رياض الأطفال</h3>
-          <p>مرحلة مبكرة لتعليم الأطفال من 3 إلى 6 سنوات.</p>
+      <h2 class="section-title text-center mb-5">الأقسام</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="program-card shadow-sm h-100 text-center p-4 rounded animate__animated animate__fadeInUp">
+            <img src="photo/66e9a4d007bc4867cb9a8ea3_pexels-alexander-mass-748453803-27872051.webp" alt="رياض الأطفال" class="program-img mb-3 rounded-circle">
+            <h3 class="program-title mb-2">رياض الأطفال</h3>
+            <p class="program-desc">مرحلة مبكرة لتعليم الأطفال من 3 إلى 6 سنوات، مع أنشطة تفاعلية لتنمية المهارات الأساسية.</p>
+          </div>
         </div>
-        <div class="card">
-          <img src="photo/66e9a4d007bc4867cb9a8e9d_pexels-max-fischer-5211478.webp" alt="">
-          <h3>المرحلة الابتدائية</h3>
-          <p>تعليم أساسي من الصف الأول إلى السادس.</p>
+        <div class="col-md-4 mb-4">
+          <div class="program-card shadow-sm h-100 text-center p-4 rounded animate__animated animate__fadeInUp" style="animation-delay:0.2s;">
+            <img src="photo/66e9a4d007bc4867cb9a8e9d_pexels-max-fischer-5211478.webp" alt="المرحلة الابتدائية" class="program-img mb-3 rounded-circle">
+            <h3 class="program-title mb-2">المرحلة الابتدائية</h3>
+            <p class="program-desc">تعليم أساسي من الصف الأول إلى السادس، يركز على بناء القيم والمعرفة والمهارات.</p>
+          </div>
         </div>
-        <div class="card">
-          <img src="photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif" alt="">
-          <h3>المرحلة الإعدادية</h3>
-          <p>تعليم متقدم من الصف السابع إلى التاسع.</p>
+        <div class="col-md-4 mb-4">
+          <div class="program-card shadow-sm h-100 text-center p-4 rounded animate__animated animate__fadeInUp" style="animation-delay:0.4s;">
+            <img src="photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif" alt="المرحلة الإعدادية" class="program-img mb-3 rounded-circle">
+            <h3 class="program-title mb-2">المرحلة الإعدادية</h3>
+            <p class="program-desc">تعليم متقدم من الصف السابع إلى التاسع، مع التركيز على التفكير النقدي والاستعداد للمرحلة الثانوية.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+ 
   <!--  الأنشطة المدرسية  -->
   <section class="activities" id="activities">
   
@@ -164,77 +188,85 @@
 
 
   <!--  معرض الصور  -->
-  <section class="gallery">
+  <section  id="gallery"class="gallery">
     <h2>معرض الصور</h2>
     <div class="gallery-grid" id="galleryGrid">
-      <img src="photo/hacker-cracking-binary-code-data-security.jpg" alt="صورة المدرسة 1" class="gallery-img">
-      <img src="photo/2953998.jpg" alt="صورة المدرسة 2" class="gallery-img">
-      <img src="photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif" alt="صورة المدرسة 3" class="gallery-img">
-      <img src="photo/close-up-programmer-typing-keyboard.jpg" alt="صورة المدرسة 4" class="gallery-img">
+
     </div>
+
     <p class="text-center mt-3">
       <a href="#" class="btn btn-primary">عرض المزيد من الصور</a>
     </p>
 
-
+    
   </section>
 
 
   <!--  الأخبار والتحديثات  -->
-  <section class="news">
+  <section id="news" class="news">
     <h2>آخر الأخبار</h2>
-      <div class="events-circles">
-      <div class="event-circle">
-      <div class="circle-content">
+    <div class="events-timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-event">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
         <h3>يوم الرياضة</h3>
-        <p>تاريخ: 15 مارس 2025</p>
+        <span class="timeline-date">15 مارس 2025</span>
         <p>انضموا إلينا في يوم مليء بالأنشطة الرياضية الممتعة.</p>
       </div>
       </div>
-      <div class="event-circle">
-      <div class="circle-content">
+      <div class="timeline-event">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
         <h3>معرض العلوم</h3>
-        <p>تاريخ: 22 مارس 2025</p>
+        <span class="timeline-date">22 مارس 2025</span>
         <p>استعرض مشاريع الطلاب في مجالات العلوم والتكنولوجيا.</p>
       </div>
       </div>
-      <div class="event-circle">
-      <div class="circle-content">
+      <div class="timeline-event">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
         <h3>حفل التخرج</h3>
-        <p>تاريخ: 30 يونيو 2025</p>
+        <span class="timeline-date">30 يونيو 2025</span>
         <p>احتفال بتخرج طلاب المرحلة الثانوية.</p>
       </div>
       </div>
-      <div class="event-circle">
-      <div class="circle-content">
+      <div class="timeline-event">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
         <h3>حفل تكريم المتفوقين</h3>
-        <p>تاريخ: 10 يوليو 2025</p>
+        <span class="timeline-date">10 يوليو 2025</span>
         <p>تكريم الطلاب المتفوقين في جميع المراحل الدراسية.</p>
       </div>
       </div>
-       <div class="event-circle">
-      <div class="circle-content">
-      <h3>افتتاح مختبر العلوم الجديد</h3>
-      <p>يسرنا الإعلان عن افتتاح مختبر العلوم الجديد الذي سيساعد الطلاب في إجراء التجارب العلمية.</p>
+      <div class="timeline-event">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>افتتاح مختبر العلوم الجديد</h3>
+        <p>يسرنا الإعلان عن افتتاح مختبر العلوم الجديد الذي سيساعد الطلاب في إجراء التجارب العلمية.</p>
+      </div>
+      </div>
+      <div class="timeline-event">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>نتائج امتحانات الفصل الدراسي الأول</h3>
+        <p>تم نشر نتائج امتحانات الفصل الدراسي الأول، يمكن للطلاب وأولياء الأمور الاطلاع عليها عبر البوابة الإلكترونية.</p>
+      </div>
+      </div>
+      <div class="timeline-event">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>ورشة عمل للمعلمين</h3>
+        <p>نظمنا ورشة عمل للمعلمين حول استراتيجيات التعليم الحديثة وكيفية دمج التكنولوجيا في الفصول الدراسية.</p>
+      </div>
+      </div>
     </div>
-    </div>
-    <div class="event-circle">
-      <div class="circle-content">
-      <h3>نتائج امتحانات الفصل الدراسي الأول</h3>
-      <p>تم نشر نتائج امتحانات الفصل الدراسي الأول، يمكن للطلاب وأولياء الأمور الاطلاع عليها عبر البوابة الإلكترونية.</p>
-    </div>
-    </div>
-      <div class="event-circle">
-      <div class="circle-content">
-      <h3>ورشة عمل للمعلمين</h3>
-      <p>نظمنا ورشة عمل للمعلمين حول استراتيجيات التعليم الحديثة وكيفية دمج التكنولوجيا في الفصول الدراسية.</p>
-    </div>
-    </div>
-    </div>
-  </section>
+    </section>
 
-    <!--  الأسئلة الشائعة  -->
-  <section class="faq">
+
+
+  <!-- الأسئلة الشائعة -->
+  <section class="faq" id="faq">
     <h2>الأسئلة الشائعة</h2>
     <div class="faq-item">
       <button class="faq-question">ما هي مواعيد التسجيل؟</button>
@@ -257,7 +289,7 @@
   </section>
   
   <!-- آراء أولياء  -->
-  <section class="testimonials">
+  <section class="testimonials"  id="testimonials">
     <h2>آراء أولياء الأمور</h2>
     <div class="testimonials-messages">
       <div class="testimonial message-left">
@@ -314,7 +346,7 @@
   </section>
 
   <!--  الشركاء والداعمين  -->
-  <section class="partners">
+  <section class="partners" id="partners">
     <h2>شركاؤنا</h2>
     <p>نحن فخورون بشراكتنا مع العديد من المؤسسات التعليمية والمجتمعية التي تدعم رؤيتنا.</p>
     <div class="partner-logos">
@@ -324,21 +356,26 @@
     </div>
   </section>
 
-  <!--  تواصل معنا  -->
+  
 
- <section class="contact" id="contact"></section>
-      <footer>
-         <a name="contact_us" ></a>
-        <div class="footer_container">
-            <div class="footer-content">
-                <h3>Contact Us</h3>
-                <p>Email:Info@ITD-eg.com</p>
-                <p>Phone: 0115 22 353 44 </p>
-                <p>Address: Cairo, Egypt  </p>
-            <div >
-                <h3>Follow us on social media</h3>
-                <ul class="social-icons">
-                  <div class="social-i">
+<!-- تواصل معنا -->
+<section class="contact-section py-5" id="contact">
+  <div class="container">
+    <h2 class="text-center mb-4">تواصل معنا</h2>
+    <p class="text-center mb-5">إذا كان لديك أي استفسار أو تحتاج إلى مزيد من المعلومات، لا تتردد في التواصل معنا عبر النموذج أو وسائل التواصل الاجتماعي.</p>
+    <div class="row justify-content-center">
+      <!-- معلومات التواصل -->
+      <div class="col-md-5 mb-4">
+        <div class="contact-info bg-light rounded p-4 h-100 shadow-sm">
+          <h4 class="mb-3">معلومات التواصل</h4>
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><i class="fa-solid fa-envelope-open-text me-2 text-success"></i> Info@ITD-eg.com</li>
+            <li class="mb-2"><i class="fa-solid fa-phone me-2 text-success"></i> 0115 22 353 44</li>
+            <li><i class="fa-solid fa-location-dot me-2 text-success"></i> القاهرة، مصر</li>
+          </ul>
+          <h5 class="mb-2">تابعنا على:</h5>
+          <div class="d-flex gap-3 social-icons">
+            <div class="social-i">
                     <a href="" style="--color: #0072b1">
                       <i class="fa-solid fa-envelope-open-text"></i>
                     </a>
@@ -353,36 +390,53 @@
                     </a>
                 </ul>
                 </div>
+          </div>
         </div>
-              
-                   <div class="footer-col">
-            <h4> Send Message</h4>
-            <form>
+      </div>
+      <!-- نموذج التواصل -->
+      <div class="col-md-7 mb-4">
+        <form class="contact-form bg-white rounded p-4 shadow-sm" id="contactForm" autocomplete="off">
+          <h4 class="mb-3">أرسل رسالة</h4>
+          <div class="mb-3">
+            <label for="name" class="form-label">الاسم</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="اسمك" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">البريد الإلكتروني</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">الرسالة</label>
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="اكتب رسالتك هنا..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success w-100">إرسال</button>
+          <div id="formMsg" class="mt-3 text-center" style="display:none;"></div>
+        </form>
+      </div>
+    </div>
+    <!-- الخريطة -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-8">
+        <div class="map-container rounded overflow-hidden shadow-sm">
+          <h5 class="mb-2 text-center">موقعنا على الخريطة</h5>
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?"
+            style="width:100%; height:300px; border:1px solid #ccc;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                 <label for="name" class="form-label">Name</label>
-                <input type="text" name="name" placeholder="Name" required>
-                 <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" placeholder="email " required>
-                <label for="message" class="form-label">Message</label>
-                <textarea name="message" placeholder="message" required></textarea>
-                <button type="" class="  ">send</button>
-            </form>
-            <div class="map-container" style="margin-top:20px;">
-              <h4>موقعنا على الخريطة</h4>
-              <iframe
-                src="https://www.openstreetmap.org/export/embed.html?"
-                style="width:100%; height:300px; border:1px solid #ccc;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-            </div>
-        </div>
-        </div>
-        <div class="bottom-bar">
-            <p>&copy;2025 ITD-eg - All Rights Reserved</p>
-        </div>
-         </footer>
+<footer class="footer bg-success text-white py-3 mt-5">
+  <div class="container text-center">
+    <p class="mb-0">&copy; 2025 ITD-eg - جميع الحقوق محفوظة</p>
+  </div>
+</footer>
 
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>

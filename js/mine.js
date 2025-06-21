@@ -96,102 +96,229 @@ $(document).ready(function() {
     });
 });
 
-
-
-// تقليب الصور كل  3 ثواني
-      (function() {
-        const grid = document.getElementById('galleryGrid');
-        if (!grid) return;
-        const images = [
-          "photo/hacker-cracking-binary-code-data-security.jpg",
-          "photo/2953998.jpg",
-          "photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif",
-          "photo/66e9a4d007bc4867cb9a8ea3_pexels-alexander-mass-748453803-27872051.webp",
-          "photo/close-up-programmer-typing-keyboard.jpg",
-          "photo/teacher1.avif",
-          "photo/teacher2.avif",
-          "photo/8711572.jpg",
-          "photo/66e9a4d007bc4867cb9a8e9d_pexels-max-fischer-5211478.webp",
-          "photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif",
-       
-          // يمكنك إضافة المزيد من الصور هنا
-        ];
-        let currentStart = 0;
-        function updateGallery() {
-          const imgs = grid.querySelectorAll('.gallery-img');
-          for (let i = 0; i < imgs.length; i++) {
-            const idx = (currentStart + i) % images.length;
-            imgs[i].src = images[idx];
-          }
-          currentStart = (currentStart + 1) % images.length;
-        }
-        setInterval(updateGallery, 3000); // كل 3 ثواني
-        // إنشاء الصور في البداية
-        for (let i = 0; i < 3; i++) {
-          const img = document.createElement('img');
-          img.className = 'gallery-img';
-          img.src = images[i % images.length];
-          grid.appendChild(img);
-        }
-        // تحديث المعرض عند التحميل
-        updateGallery();
-        // إضافة حدث عند النقر على الصور
-        grid.addEventListener('click', function(event) {
-          if (event.target.classList.contains('gallery-img')) {
-            const src = event.target.src;
-            const modal = document.createElement('div');
-            modal.className = 'modal';
-            modal.innerHTML = `<span class="close">&times;</span><img class="modal-content" src="${src}">`;
-            document.body.appendChild(modal);
-            modal.querySelector('.close').onclick = function() {
-              document.body.removeChild(modal);
-            };
-          }
-        });
-        // إضافة أنماط للنافذة المنبثقة
-        const style = document.createElement('style');
-        style.innerHTML = `
-          .modal {
-            display: flex;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            justify-content: center;
-            align-items: center;
-          }
-          .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-          }
-          .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-          }
-        `;
-        document.head.appendChild(style);
-
-      })();
-
-
-// إضافة تأثيرات على الأزرار
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('mouseover', function() {
-        this.classList.add('btn-hover');
-    });
-    btn.addEventListener('mouseout', function() {
-        this.classList.remove('btn-hover');
-    });
+       // حركة عند تمرير الماوس على عناصر القائمة
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {  
+    link.addEventListener('mouseenter', function() {
+        this.classList.add('animate__animated', 'animate__pulse');
+    }
+    );
+    link.addEventListener('mouseleave', function() {
+        this.classList.remove('animate__animated', 'animate__pulse');
+    }
+    );
+});
+// حركة عند تمرير الماوس على زر القائمة المنسدلة
+const dropdownLinks = document.querySelectorAll('.dropdown-item');
+dropdownLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+        this.classList.add('animate__animated', 'animate__fadeIn');
+    }
+    );
+    link.addEventListener('mouseleave', function() {
+        this.classList.remove('animate__animated', 'animate__fadeIn');
+    }
+    );
 });
 
+    
+
+
+
+     
+               
+
+
+
+
+
+
+
+// تقليب الصور كل 3 ثواني مع عرض صورتين وأسهم جانبية لتقليب يدوي
+(function() {
+    const grid = document.getElementById('galleryGrid');
+    if (!grid) return;
+    const images = [
+        "photo/hacker-cracking-binary-code-data-security.jpg",
+        "photo/2953998.jpg",
+        "photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif",
+        "photo/66e9a4d007bc4867cb9a8ea3_pexels-alexander-mass-748453803-27872051.webp",
+        "photo/close-up-programmer-typing-keyboard.jpg",
+        "photo/teacher1.avif",
+        "photo/teacher2.avif",
+        "photo/8711572.jpg",
+        "photo/66e9a4d007bc4867cb9a8e9d_pexels-max-fischer-5211478.webp",
+        "photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif",
+    ];
+    let currentStart = 0;
+    const imagesPerView = 2;
+
+    // إنشاء الأسهم
+    const leftArrow = document.createElement('span');
+    leftArrow.className = 'gallery-arrow gallery-arrow-left';
+    leftArrow.innerHTML = '&#10099;';
+    const rightArrow = document.createElement('span');
+    rightArrow.className = 'gallery-arrow gallery-arrow-right';
+    rightArrow.innerHTML = '&#10098;';
+    grid.appendChild(leftArrow);
+    grid.appendChild(rightArrow);
+
+    // إنشاء الصور في البداية
+    for (let i = 0; i < imagesPerView; i++) {
+        const img = document.createElement('img');
+        img.className = 'gallery-img';
+        img.src = images[i % images.length];
+        grid.appendChild(img);
+    }
+
+    function updateGallery() {
+        const imgs = grid.querySelectorAll('.gallery-img');
+        for (let i = 0; i < imgs.length; i++) {
+            const idx = (currentStart + i) % images.length;
+            imgs[i].src = images[idx];
+        }
+    }
+
+    function next() {
+        currentStart = (currentStart + imagesPerView) % images.length;
+        updateGallery();
+    }
+    function prev() {
+        currentStart = (currentStart - imagesPerView + images.length) % images.length;
+        updateGallery();
+    }
+
+    rightArrow.onclick = next;
+    leftArrow.onclick = prev;
+
+    let interval = setInterval(next, 3000);
+
+    // إيقاف التقليب التلقائي عند المرور بالماوس
+    grid.addEventListener('mouseenter', () => clearInterval(interval));
+    grid.addEventListener('mouseleave', () => interval = setInterval(next, 3000));
+
+    // تحديث المعرض عند التحميل
+    updateGallery();
+
+    // عند النقر على صورة، عرضها في نافذة منبثقة
+    grid.addEventListener('click', function(event) {
+        if (event.target.classList.contains('gallery-img')) {
+            let src = event.target.src;
+            let currentIdx = images.findIndex(img => src.includes(img.split('/').pop()));
+            if (currentIdx === -1) currentIdx = 0;
+
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <span class="arrow arrow-left">&#10099;</span>
+                <span class="arrow arrow-right">&#10098;</span>
+                <span class="close">&times;</span>
+                <img class="modal-content" src="${images[currentIdx]}">
+            `;
+            document.body.appendChild(modal);
+
+            const modalImg = modal.querySelector('.modal-content');
+            const closeBtn = modal.querySelector('.close');
+            const leftArrow = modal.querySelector('.arrow-left');
+            const rightArrow = modal.querySelector('.arrow-right');
+
+            function showImage(idx) {
+                if (idx < 0) idx = images.length - 1;
+                if (idx >= images.length) idx = 0;
+                currentIdx = idx;
+                modalImg.src = images[currentIdx];
+            }
+
+            leftArrow.onclick = function(e) {
+                e.stopPropagation();
+                showImage(currentIdx - 1);
+            };
+            rightArrow.onclick = function(e) {
+                e.stopPropagation();
+                showImage(currentIdx + 1);
+            };
+            closeBtn.onclick = function() {
+                document.body.removeChild(modal);
+            };
+            modal.tabIndex = -1;
+            modal.focus();
+            modal.onkeydown = function(e) {
+                if (e.key === "ArrowLeft") {
+                    showImage(currentIdx - 1);
+                } else if (e.key === "ArrowRight") {
+                    showImage(currentIdx + 1);
+                } else if (e.key === "Escape") {
+                }
+            };
+        }
+    });
+})();
+
+// عرض الأحداث في الجدول الزمني عند التمرير
+   function revealTimelineEvents() {
+      var events = document.querySelectorAll('.timeline-event');
+      var windowHeight = window.innerHeight;
+      events.forEach(function(event) {
+        var rect = event.getBoundingClientRect();
+        if (rect.top < windowHeight - 100 && rect.bottom > 100) {
+          event.classList.add('visible');
+        }
+        else {
+          event.classList.remove('visible');
+        }
+        if (rect.top < windowHeight - 100 && !event.classList.contains('animated')) {
+          event.classList.add('animated');
+          event.style.animation = 'fadeInUp 0.5s ease forwards';
+        }else if (rect.top >= windowHeight - 100 && event.classList.contains('animated')) {
+          event.classList.remove('animated');
+          event.style.animation = '';
+        }
+
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      revealTimelineEvents();
+      window.addEventListener('scroll', revealTimelineEvents);
+        window.addEventListener('resize', revealTimelineEvents);
+        window.addEventListener('load', revealTimelineEvents);
+        window.addEventListener('orientationchange', revealTimelineEvents);
+        window.addEventListener('touchmove', revealTimelineEvents, { passive: true });
+        window.addEventListener('touchstart', revealTimelineEvents, { passive: true });
+        window.addEventListener('touchend', revealTimelineEvents, { passive: true });
+        window.addEventListener('touchcancel', revealTimelineEvents, { passive: true });
+        window.addEventListener('pointermove', revealTimelineEvents, { passive: true });
+        window.addEventListener('pointerdown', revealTimelineEvents, { passive: true });
+        window.addEventListener('pointerup', revealTimelineEvents, { passive: true });
+        window.addEventListener('pointercancel', revealTimelineEvents, { passive: true });
+        window.addEventListener('wheel', revealTimelineEvents, { passive: true });
+        window.addEventListener('mousewheel', revealTimelineEvents, { passive: true });
+        window.addEventListener('keydown', function(e) {
+            if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+                revealTimelineEvents();
+            }
+        });
+        window.addEventListener('keyup', function(e) {
+            if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+                revealTimelineEvents();
+            }
+        });
+        window.addEventListener('focus', revealTimelineEvents);
+        window.addEventListener('blur', revealTimelineEvents);
+        window.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'visible') {
+                revealTimelineEvents();
+            }
+        });
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted || window.performance && window.performance.navigation.type === 2) {
+                revealTimelineEvents();
+            }
+        });
+        window.addEventListener('load', function() {
+            setTimeout(revealTimelineEvents, 100); // تأخير بسيط للتأكد من تحميل كل العناصر
+        });
+     
+    });
 
 
 
@@ -240,20 +367,24 @@ $(document).ready(function() {
             $('.navbar').removeClass('scrolled');
         }
     });
+ 
 
-    $('form').on('submit', function(e) {
-        e.preventDefault();
-        var name = $('input[name="name"]').val();
-        var email = $('input[name="email"]').val();
-        var message = $('textarea[name="message"]').val();
-
-        if (name && email && message) {
-            alert('شكراً لتواصلك معنا يا ' + name + '!');
-            $(this).trigger('reset');
-        } else {
-            alert('يرجى ملء جميع الحقول.');
-        }
-    });
+$(function() {
+  $('#contactForm').on('submit', function(e) {
+    e.preventDefault();
+    // محاكاة إرسال النموذج
+    $('#formMsg').hide().removeClass('text-danger text-success');
+    var name = $('#name').val().trim();
+    var email = $('#email').val().trim();
+    var message = $('#message').val().trim();
+    if(name && email && message) {
+      $('#formMsg').addClass('text-success').text('تم إرسال رسالتك بنجاح! سنقوم بالرد قريباً.').fadeIn();
+      this.reset();
+    } else {
+      $('#formMsg').addClass('text-danger').text('يرجى ملء جميع الحقول.').fadeIn();
+    }
+  });
+}); 
 
     var backToTopBtn = $('#backToTop');
     if (backToTopBtn.length) {
