@@ -121,6 +121,43 @@ dropdownLinks.forEach(link => {
     );
 });
 
+
+  //services  functionality
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('showManagementBtn1');
+        var div = document.getElementById('managementServices1');
+        btn.addEventListener('click', function() {
+          div.style.display = div.style.display === 'none' ? 'block' : 'none';
+        });
+        var closeBtn = document.getElementById('hedenManagementBtn1');
+        closeBtn.addEventListener('click', function() {
+          div.style.display = 'none';
+        });
+      });
+           document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('showManagementBtn2');
+        var div = document.getElementById('managementServices2');
+        btn.addEventListener('click', function() {
+          div.style.display = div.style.display === 'none' ? 'block' : 'none';
+        });
+        var closeBtn = document.getElementById('hedenManagementBtn2');
+        closeBtn.addEventListener('click', function() {
+          div.style.display = 'none';
+        });
+      });
+               document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('showManagementBtn3');
+        var div = document.getElementById('managementServices3');
+        btn.addEventListener('click', function() {
+          div.style.display = div.style.display === 'none' ? 'block' : 'none';
+        });
+        var closeBtn = document.getElementById('hedenManagementBtn3');
+        closeBtn.addEventListener('click', function() {
+          div.style.display = 'none';
+        });
+      });
+
     
 
 
@@ -139,16 +176,17 @@ dropdownLinks.forEach(link => {
     const grid = document.getElementById('galleryGrid');
     if (!grid) return;
     const images = [
-        "photo/hacker-cracking-binary-code-data-security.jpg",
-        "photo/2953998.jpg",
-        "photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif",
-        "photo/66e9a4d007bc4867cb9a8ea3_pexels-alexander-mass-748453803-27872051.webp",
-        "photo/close-up-programmer-typing-keyboard.jpg",
-        "photo/teacher1.avif",
-        "photo/teacher2.avif",
-        "photo/8711572.jpg",
-        "photo/66e9a4d007bc4867cb9a8e9d_pexels-max-fischer-5211478.webp",
-        "photo/66e9a4d007bc4867cb9a8e9f_pexels-zachtheshoota-1838640.avif",
+        "photo/New folder (2)/1751904900537.jpg ",
+        "photo/New folder (2)/1751904900546.jpg",
+        "photo/New folder (2)/1751904900553.jpg",
+        "photo/New folder (2)/1751904900561.jpg",
+        "photo/New folder (2)/1751904900569.jpg",
+        "photo/New folder (2)/1751904900594.jpg",
+        "photo/New folder (2)/1751904900612.jpg",
+        "photo/New folder (2)/1751904900670.jpg",
+        "photo/New folder (2)/1751904900725.jpg",
+        "photo/New folder (2)/1751904900754.jpg",
+        "photo/New folder (2)/1751904900692.jpg",
     ];
     let currentStart = 0;
     const imagesPerView = 2;
