@@ -1280,7 +1280,8 @@ ul {
 @media (max-width: 600px) {
   body {
     font-size: 1rem;
-    padding: 3px;
+  padding-right: 3px !important;
+    padding-left: 0px !important;
   }
   .navbar, .hero, .about, .stats-table-container,  .activities, .gallery, .team,  .faq, footer {
     padding-left: 0;
