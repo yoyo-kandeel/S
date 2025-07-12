@@ -162,15 +162,6 @@ dropdownLinks.forEach(link => {
 
 
 
-     
-               
-
-
-
-
-
-
-
 // تقليب الصور كل 3 ثواني مع عرض صورتين وأسهم جانبية لتقليب يدوي
 (function() {
     const grid = document.getElementById('galleryGrid');
