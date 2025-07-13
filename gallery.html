@@ -6,19 +6,17 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 
 <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" href="css/mine.css">
+ 
 
   <link rel="stylesheet" href="css/animate.min.css"/>
-
+ <link rel="stylesheet" href="css/mine.css">
 </head>
 
 <body>
- 
   <!-- زر العودة للأعلى -->
   <a href="#" id="backToTop">
     <i class="fa fa-arrow-up"></i>
   </a>
-
 
   <header class="navbar">
    
@@ -448,7 +446,7 @@
   </div>
 </section>
 
-<footer class="footer bg-success text-white py-3 mt-5">
+<footer class="footer  text-white py-3 mt-5">
   <div class="container text-center">
     <p class="mb-0">&copy; 2025 ITD-eg - جميع الحقوق محفوظة</p>
   </div>
@@ -539,38 +537,7 @@
             }
         `)
         .appendTo('head');
-    //إضافة CSS للزر "العودة للأعلى"
-    $('<style>')
-        .prop('type', 'text/css')
-        .html(`
-            #backToTop {
-
-                display: none;
-  position: fixed;
-  bottom: 30px;
-  left: 30px;
-  z-index: 9999;
-  background: #28a745;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 50%;
-  font-size: 22px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  transition: background 0.2s, transform 0.2s;
-  text-align: center;
-  cursor: pointer;
-            }
-            #backToTop:hover {
-                background: #218838;
-  transform: scale(1.1);
-  color: #fff;
-  text-decoration: none;
-}
-#backToTop i {
-  pointer-events: none;
-            }
-        `)
-        .appendTo('head');
+  
     //إظهار زر العودة للأعلى عند التمرير
     $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
