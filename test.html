@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مدرسة الماسة الخاصة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- خطوط وأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      scroll-behavior: smooth;
+    }
+    .section-title {
+      color: #003092;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .section-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .video-wrap video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      color: white;
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      display: block;
+      margin: 0 auto;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #28a745;
+      color: #fff;
+      border-radius: 50%;
+      padding: 10px;
+      display: none;
+      z-index: 999;
+      cursor: pointer;
+    }
+    #backToTop:hover {
+      background-color: #218838;
+    }
+    .faq-section .accordion-button {
+      background-color: #f7f7f7;
+      color: #003092;
+    }
+  </style>
+</head>
+<body>
+
+<!-- شريط التنقل -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">مدرسة الماسة</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">عن المدرسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="#program">برامجنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">آراء أولياء الأمور</a></li>
+        <li class="nav-item"><a class="nav-link" href="#activities">الأنشطة</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- فيديو رئيسي -->
+<section class="hero d-flex align-items-center justify-content-center">
+  <div class="video-wrap">
+    <video autoplay loop muted playsinline>
+      <source src="photo/El-Massa Video_20250626_231848_0002.mp4" type="video/mp4">
+    </video>
+  </div>
+  <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+</section>
+
+<!-- عن المدرسة -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="section-title">عن المدرسة</h2>
+        <p class="section-text">
+          مدرستنا تهدف إلى تقديم تعليم عالي الجودة في بيئة محفزة وآمنة نؤمن بأهمية تطوير مهارات الطلاب الأكاديمية والاجتماعية، ونشجع على الإبداع والتفكير النقدي.
+        </p>
+        <ul class="list-unstyled">
+          <li>✔️ مناهج حديثة ومتطورة</li>
+          <li>✔️ أنشطة رياضية وفنية متنوعة</li>
+          <li>✔️ كادر تعليمي مؤهل</li>
+          <li>✔️ بيئة تعليمية آمنة</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <video autoplay loop muted playsinline class="w-100 rounded shadow">
+          <source src="photo/ADMIN/Soft Yellow White reason why choosing us instagram post_20250522_010008_0001.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- البرامج التعليمية -->
+<section id="program" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-2 order-md-1">
+        <img src="photo/photo-1513258496099-48168024aec0.jpeg" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6 order-1 order-md-2">
+        <h2 class="section-title">برامجنا</h2>
+        <p class="section-text">
+          نقدم مجموعة واسعة من البرامج التعليمية والأنشطة اللامنهجية التي تلبي احتياجات جميع الطلاب، مثل:
+        </p>
+        <ul class="list-unstyled">
+          <li>📚 برامج تعليمية لجميع المراحل</li>
+          <li>💻 مختبرات حاسوب متقدمة</li>
+          <li>⚽ فرق رياضية ومسابقات</li>
+          <li>🎨 ورش عمل فنية وموسيقية</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- آراء أولياء الأمور -->
+<section id="gallery" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">آراء أولياء الأمور</h2>
+    <div class="card">
+      <img id="commentImage" src="" alt="تعليق ولي أمر">
+    </div>
+  </div>
+</section>
+
+<!-- الأنشطة الطلابية -->
+<section id="activities" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="section-title">أنشطة المدرسة</h2>
+    <div class="row g-3">
+      <div class="col-md-4"><img src="photo/activities/act1.jpg" class="img-fluid rounded shadow-sm"></div>
+      <div class="col-md-4"><img src="photo/activities/act2.jpg" class="img-fluid rounded shadow-sm"></div>
+      <div class="col-md-4"><img src="photo/activities/act3.jpg" class="img-fluid rounded shadow-sm"></div>
+    </div>
+  </div>
+</section>
+
+<!-- تواصل معنا -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="section-title">انضم إلينا</h2>
+        <p class="section-text">نسعى لبناء مجتمع مدرسي متعاون. يمكنكم التواصل معنا أو زيارة المدرسة للتعرف أكثر على خدماتنا.</p>
+        <a href="#contact-form" class="btn btn-success px-4">تواصل معنا</a>
+      </div>
+      <div class="col-md-6">
+        <img src="photo/photo-1464983953574-0892a716854b.jpeg" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- نموذج التواصل -->
+<section id="contact-form" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">نموذج التواصل</h2>
+    <form class="row g-3">
+      <div class="col-md-6"><input type="text" class="form-control" placeholder="الاسم" required></div>
+      <div class="col-md-6"><input type="email" class="form-control" placeholder="البريد الإلكتروني" required></div>
+      <div class="col-12"><textarea class="form-control" rows="4" placeholder="رسالتك" required></textarea></div>
+      <div class="col-12 text-center"><button type="submit" class="btn btn-primary px-5">إرسال</button></div>
+    </form>
+  </div>
+</section>
+
+<!-- الأسئلة الشائعة -->
+<section class="faq-section py-5 bg-white">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">الأسئلة الشائعة</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true">
+            ما هي مواعيد الدوام؟
+          </button>
+        </h2>
+        <div id="a1" class="accordion-collapse collapse show">
+          <div class="accordion-body">يبدأ الدوام من الساعة 8 صباحًا حتى الساعة 2 ظهرًا.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+            هل يوجد باصات مدرسية؟
+          </button>
+        </h2>
+        <div id="a2" class="accordion-collapse collapse">
+          <div class="accordion-body">نعم، نوفر باصات مريحة وآمنة لنقل الطلاب من وإلى المدرسة.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- الفوتر -->
+<footer class="bg-dark text-white py-3 text-center">
+  <div class="container">
+    <p class="mb-0">© 2024 مدرسة الماسة. جميع الحقوق محفوظة.</p>
+    <p>info@school.com | 0123456789</p>
+  </div>
+</footer>
+
+<!-- زر الرجوع للأعلى -->
+<a href="#" id="backToTop"><i class="fa fa-arrow-up"></i></a>
+
+<!-- سكريبتات -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+  const comments = [
+    { image: "photo/REVIEWS/1_20250419_235740_0000.png" },
+    { image: "photo/REVIEWS/2_20250419_235740_0001.png" },
+    { image: "photo/REVIEWS/4_20250419_235740_0003.png" },
+    { image: "photo/REVIEWS/3_20250419_235740_0002.png" },
+    { image: "photo/REVIEWS/5_20250419_235740_0004.png" },
+    { image: "photo/REVIEWS/6_20250419_235740_0005.png" },
+    { image: "photo/REVIEWS/7_20250419_235740_0006.png" },
+    { image: "photo/REVIEWS/8_20250419_235740_0007.png" },
+    { image: "photo/REVIEWS/9_20250419_235740_0008.png" },
+    { image: "photo/REVIEWS/10_20250419_235740_0009.png" }
+  ];
+  let currentIndex = 0;
+  function updateCard() {
+    const comment = comments[currentIndex];
+    document.getElementById('commentImage').src = comment.image;
+    currentIndex = (currentIndex + 1) % comments.length;
+  }
+  updateCard();
+  setInterval(updateCard, 3000);
+
+  // زر العودة للأعلى
+  window.onscroll = function () {
+    document.getElementById("backToTop").style.display = window.scrollY > 300 ? "block" : "none";
+  };
+  document.getElementById("backToTop").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>

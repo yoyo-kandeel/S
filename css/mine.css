@@ -838,6 +838,11 @@ body {
 .footer {
   background: #578fca
 }
+.footer a {
+  color: #fff;
+ 
+}
+
 @media (max-width:767px) {
   .contact-form,
   .contact-info {
