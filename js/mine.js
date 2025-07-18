@@ -431,3 +431,7 @@ $(function() {
     }
 });
  
+/*عند تحريك صفحة لاسفل او لاعلي اغلق الdropdown*/
+$(document).on('scroll', function() {
+    $('.dropdown-menu').removeClass('show');
+});
